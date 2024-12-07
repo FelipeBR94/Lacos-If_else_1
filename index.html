@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Nota do aluno</h1>
+        <input type="number" id="nota" placeholder="Informe a nota do aluno">
+        <button onclick="verificarNota()">Verificar nota do aluno</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarNota(){
+            var nota = document.getElementById('nota').value
+            if (nota >= 10){
+                document.getElementById('resultado').innerText = "Aluno aprovado!"
+            } else if(nota >=7 && nota <=9){
+                document.getElementById('resultado').innerText = "Aluno aprovado!"
+            } else if(nota >= 5 && nota <= 6){
+                document.getElementById('resultado').innerText = "Aluno em substituição!"
+            } else{
+                document.getElementById('resultado').innerText = "Aluno reprovado!"
+            }    
+        }
+    </script>
+    
+</body>
+</html>
